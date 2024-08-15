@@ -8,11 +8,7 @@ token = "6882490925:AAE-S1M79DcEKPQvRZmc2ytl_xzk_yT-5Cc"
 def check_username(app, username):
     try:
         user = app.resolve_peer(username)
-        info = f"{user.first_name} ({user.id})"
-        if "None" in info:
-            print(f"Username: {username} - Taken in Channel")
-        else:
-            print(f"Username: {username} - User: {user.first_name} ({user.id})")
+        print(False)
     except UsernameNotOccupied:
         print(f"Username: {username} - Available")
     except Exception as e:
